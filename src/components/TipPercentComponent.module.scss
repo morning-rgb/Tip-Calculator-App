@@ -1,0 +1,45 @@
+.tipPercentComponent {
+    margin-top: rem(36px);
+    width: 100%;
+
+    @include desktop {
+        margin-top: rem(40px);
+    }
+}
+
+.wrapper {
+    width: 100%;
+    margin-top: rem(6px);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: rem(16px);
+    row-gap: rem(16px);
+
+    @include desktop {
+        margin-top: rem(16px);
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.wrapper .customButton {
+    background-color: var(--light-grey);
+    color: var(--medium-grey);
+
+    &:hover {
+        background-color: var(--light-grey);
+    }
+}
+
+.wrapper .customInput {
+    margin: 0px;
+    display: inline-block;
+    
+    grid-column: 1 span;
+    width: 100%;
+
+    padding-left: rem(18px);
+
+    caret-color: var(--input-border-focus);
+}

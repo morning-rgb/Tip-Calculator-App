@@ -1,0 +1,35 @@
+.button {
+    cursor: pointer;
+
+    border: none;
+    outline: none;
+    border-radius: rem(6px);
+
+    height: rem(48px);
+    width: 100%;
+
+    background-color: var(--dark-green);
+
+    font-family: var(--main-font-family);
+    font-size: rem(24px);
+    color: var(--white);
+
+    transition: background-color 0.3s;
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: var(--button-bg-hover);
+            color: var(--dark-green);
+        }
+    }
+
+    &.isChecked {
+        background-color: var(--light-green);
+
+        color: var(--dark-green);
+    }
+}

@@ -1,0 +1,33 @@
+@use './functions' as *;
+
+@mixin hover {
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+
+    @media (hover: none) {
+        &:active {
+            @content;
+        }
+    }
+}
+
+@mixin tablet {
+    @media (min-width: rem(490px)) and (max-width: rem(1050px)) {
+        @content;
+    }
+}
+
+@mixin tabletAndDesktop {
+    @media (min-width: rem(490px)) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: rem(1050px)) {
+        @content;
+    }
+}

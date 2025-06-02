@@ -1,0 +1,32 @@
+.tipResultField {
+    display: grid;
+    grid-template-areas:
+    "title value"
+    "description value";
+
+    margin-top: rem(21px);
+}
+
+.title {
+    grid-area: title;
+
+    font-size: rem(16px);
+    color: var(--white);
+}
+
+.value {
+    grid-area: value;
+    display: inline-block;
+    margin-left: auto;
+    vertical-align: middle;
+
+    font-size: rem(32px);
+    color: var(--light-green);
+}
+
+.description {
+    grid-area: description;
+
+    font-size: rem(13px);
+    color: var(--medium-grey);
+}

@@ -1,0 +1,40 @@
+.input {
+    cursor: pointer;
+
+    width: 100%;
+    height: rem(48px);
+
+    grid-column: 2 span;
+
+    padding-inline: rem(48px) rem(18px);
+    margin-top: rem(6px);
+
+    border-radius: rem(10px);
+
+    background-color: var(--light-grey);
+
+    font-size: rem(24px);
+    font-family: var(--main-font-family);
+    color: var(--dark-green);
+
+    text-align: right;
+
+    border: rem(2px) solid transparent;
+    outline: none;
+
+    background-repeat: no-repeat;
+    background-position: rem(18px) 50%;
+
+    &:focus {
+        border-color: var(--input-border-focus);
+    }
+
+    &.isInvalid {
+        border-color: var(--red);
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        display: none;
+    }
+}

@@ -1,0 +1,12 @@
+.fieldWrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+}
+
+.error {
+    color: var(--red);
+    
+    display: inline-block;
+    margin-left: auto;
+}

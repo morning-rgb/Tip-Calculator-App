@@ -1,0 +1,59 @@
+.tipCalculator {
+    width: 100%;
+
+    background-color: var(--white);
+
+    border-top-left-radius: rem(25px);
+    border-top-right-radius: rem(25px);
+
+    padding: rem(32px) rem(24px);
+
+    & > * {
+        padding-inline: rem(12px);
+
+        @include desktop {
+            padding-inline: rem(12px) rem(48px);
+            padding-block: rem(9px) rem(12px);
+        }
+    }
+
+    @include tabletAndDesktop {
+        border-radius: rem(25px);
+    }
+
+    @include tablet {
+        max-width: rem(480px);
+        margin-bottom: rem(48px);
+
+        box-shadow: rem(10px) rem(5px) rem(10px) var(--medium-grey);
+    }
+
+    @include desktop {
+        max-width: rem(920px);
+        padding: rem(32px);
+
+        box-shadow: rem(5px) rem(10px) rem(10px) var(--medium-grey);
+
+        display: grid;
+        grid-template-columns: 1fr rem(413px);
+
+        @media (prefers-reduced-motion: no-preference) {
+            transition: 1s;
+
+            &:hover {
+                transform: scale(1.025);
+                box-shadow: rem(2px) rem(8px) rem(20px) var(--medium-grey);
+            }
+        }
+    }
+}
+
+
+.field {
+    display: inline-block;
+    margin-top: rem(32px);
+
+    @include desktop {
+        margin-top: rem(40px);
+    }
+}
