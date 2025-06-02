@@ -2,7 +2,7 @@ import { TipCalculatorComponent } from './components/TipCalculatorComponent'
 
 import styles from './App.module.scss'
 
-import logo from './assets/images/logo.svg'
+import logo from './assets/logo.svg'
 
 function App() {
   return (

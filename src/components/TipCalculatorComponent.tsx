@@ -12,8 +12,8 @@ interface ParamsType {
 }
 
 const TipCalculatorComponent = () => {
-    const iconDollar = '/src/assets/images/icon-dollar.svg'
-    const iconPerson = '/src/assets/images/icon-person.svg'
+    const iconDollar = '/images/icon-dollar.svg'
+    const iconPerson = '/images/icon-person.svg'
 
     const [params, setParams] = useState<ParamsType>({bill: '0', peopleNumber: '1'})
 

@@ -15,6 +15,11 @@ interface ResultType {
     totalAmount: number
 }
 
+const isInvalidResult = (result: ResultType): boolean => {
+  return !isFinite(result.tipAmount) || !isFinite(result.totalAmount) ||
+  result.tipAmount < 0 || result.totalAmount < 0
+}
+
 const TipCalculatorResultComponent = (props: TipCalculatorResultProps) => {
     const {params, resetFunc, canResetFunc} = props
     const [result, setResult] = useState<ResultType>({tipAmount: 0, totalAmount: 0})
@@ -39,7 +44,7 @@ const TipCalculatorResultComponent = (props: TipCalculatorResultProps) => {
           ),
         };
 
-        if (!isFinite(newResult.tipAmount) || !isFinite(newResult.totalAmount)) {
+        if (isInvalidResult(newResult)) {
           setResult({tipAmount: 0, totalAmount: 0})
           return
         }

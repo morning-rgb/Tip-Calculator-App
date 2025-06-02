@@ -15,7 +15,7 @@ const Input = (props: InputProps) => {
     const {value, onChange, type, iconImage, isInvalid, className, autoFocus} = props
 
     const style = {
-        backgroundImage: `url(${iconImage})`,
+        backgroundImage: iconImage ? `url(${iconImage})` : '',
     }
 
     const inputClasses = 
